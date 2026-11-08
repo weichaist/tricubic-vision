@@ -16,6 +16,17 @@ npm-debug.log*
 *.local
 !*.local.example
 .secret.local
+# Safety net: native config and signing files anywhere in the repo
+google-services.json
+GoogleService-Info.plist
+**/android/local.properties
+**/android/key.properties
+**/ios/Flutter/Secrets.xcconfig
+*.keystore
+*.jks
+*.p12
+*.pem
+service-account*.json
 
 # Firebase
 .firebase/
