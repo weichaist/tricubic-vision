@@ -1,0 +1,31 @@
+{
+  "name": "tricubic-vision-functions",
+  "description": "Cloud Functions for Tricubic Vision: clip analysis with Gemini and Supabase helpers for the camera app",
+  "private": true,
+  "main": "index.js",
+  "engines": {
+    "node": "22"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log",
+    "gemini-files:list": "node scripts/checkAIFiles.js",
+    "gemini-files:delete-all": "node scripts/cleanupAIFiles.js"
+  },
+  "dependencies": {
+    "@google/genai": "^3.0.0",
+    "@supabase/supabase-js": "^2.119.0",
+    "axios": "^1.21.0",
+    "firebase-admin": "^14.5.0",
+    "firebase-functions": "^7.4.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.14.0",
+    "globals": "^17.14.0"
+  }
+}

@@ -1,0 +1,8 @@
+# Regenerate the launcher icons after changing assets/icon/icon.png:
+#   dart run flutter_launcher_icons
+flutter_launcher_icons:
+  image_path: "assets/icon/icon.png"
+  android: true
+  min_sdk_android: 30
+  ios: true
+  remove_alpha_channel_ios: true

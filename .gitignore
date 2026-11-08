@@ -1,0 +1,40 @@
+# OS / editors
+.DS_Store
+*.swp
+.idea/
+.vscode/
+*.iml
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Env files and secrets (examples are committed)
+.env
+.env.*
+!.env.example
+*.local
+!*.local.example
+.secret.local
+
+# Firebase
+.firebase/
+firebase-debug.log*
+firestore-debug.log*
+ui-debug.log*
+
+# Supabase local state
+supabase/.branches
+supabase/.temp
+
+# Next.js
+apps/admin/.next/
+apps/admin/out/
+apps/admin/next-env.d.ts
+*.tsbuildinfo
+
+# Flutter (see apps/camera/.gitignore for the rest)
+apps/camera/build/
+apps/camera/.dart_tool/
+apps/camera/config/*.json
+!apps/camera/config/example.json

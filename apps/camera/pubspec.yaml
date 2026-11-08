@@ -1,0 +1,42 @@
+name: tricubic_vision_camera
+description: "Tricubic Vision camera: records forklift driving in short segments, flags sudden motion with the phone's sensors, and uploads each clip for AI safety analysis."
+publish_to: 'none'
+
+version: 1.0.16+1
+
+environment:
+  sdk: ^3.9.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  camerawesome: ^2.5.0
+  cloud_firestore: ^7.1.0
+  cloud_functions: ^7.0.1
+  firebase_auth: ^7.0.1
+  firebase_core: ^5.1.0
+  firebase_storage: ^14.0.1
+  flutter_smart_dialog: ^5.3.1
+  get: ^4.7.3
+  # google_fonts 9 targets the new material_ui package; the app (and GetX,
+  # camerawesome) still use package:flutter/material.dart, so stay on 8.x.
+  google_fonts: ^8.2.1
+  logger: ^2.8.0
+  path: ^1.9.1
+  path_provider: ^2.1.6
+  permission_handler: ^13.0.2
+  sensors_plus: ^7.1.1
+  shared_preferences: ^2.5.6
+  uuid: ^4.6.0
+  video_compress: ^3.1.4
+  wakelock_plus: ^1.8.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.4
+
+flutter:
+  uses-material-design: true

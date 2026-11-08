@@ -1,0 +1,12 @@
+rules_version = '2';
+
+// The camera app only creates documents in `clips`; each new document starts
+// the analyzeClipWithAI function. Functions use the Admin SDK and bypass these
+// rules. Nothing else is read or written from clients.
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /clips/{clipId} {
+      allow create: if request.auth != null;
+    }
+  }
+}
