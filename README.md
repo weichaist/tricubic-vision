@@ -1,4 +1,14 @@
+<p align="right"><b>English</b> | <a href="README.ja.md">日本語</a></p>
+
 # Tricubic Vision
+
+[![CI](https://github.com/weichaist/tricubic-vision/actions/workflows/ci.yml/badge.svg)](https://github.com/weichaist/tricubic-vision/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+![Flutter 3.47](https://img.shields.io/badge/Flutter-3.47-02569B?logo=flutter)
+![Next.js 16](https://img.shields.io/badge/Next.js-16-000000?logo=nextdotjs)
+![Gemini](https://img.shields.io/badge/AI-Gemini-8E75B2?logo=googlegemini&logoColor=white)
+
+**Tell the AI in plain words what to watch for. Get notified when it happens.**
 
 An AI safety camera for forklifts and other vehicles in warehouses.
 
@@ -13,6 +23,28 @@ The phone's motion sensors add a second, model-free signal: a sudden start, stop
 or turn above a set acceleration raises an alert immediately.
 
 The user interface of both apps is in Japanese.
+
+<p align="center">
+  <img src="docs/images/dashboard.jpg" alt="Dashboard: events defined in plain language, a camera feed, and today's notifications" width="100%">
+</p>
+<table align="center">
+  <tr>
+    <td align="center" width="50%"><img src="docs/images/rule-editor.jpg" alt="Defining an event in plain language" width="260"><br><sub>Define what to detect in plain language, no training</sub></td>
+    <td align="center" width="50%"><img src="docs/images/mobile-notifications.jpg" alt="Notifications on a phone" width="260"><br><sub>Notifications with a link to the clip</sub></td>
+  </tr>
+</table>
+
+<sub>Screenshots from the Tricubic AI web dashboard at <a href="https://vision.tricubic.dev/">vision.tricubic.dev</a>, the hosted product built on the same idea. The admin portal in this repository is organized around sites, rules and per-site alert lists, so its screens look different.</sub>
+
+## Features
+
+- **Safety rules in plain language**, per site or company-wide. No model training or labelled data.
+- **A phone is the camera.** It records one-minute segments with sound, uploads them in the background with a thumbnail, and deletes the local copy.
+- **Gemini judges each clip rule by rule.** A broken rule becomes an alert; a rule that was followed becomes applause (ブラボー).
+- **Motion-sensor alerts** for sudden starts, stops and turns, raised on the phone without the model.
+- **Admin portal**: sites, accounts and rules, plus alerts, applause and analysis logs per site, filtered by date and rule, with CSV export.
+- **Human feedback**: staff rate every result ⭕ / 🔼 / ❌, so you can measure how often the model is right.
+- **Re-run one clip** from the logs to see the model's raw answer.
 
 ## How it works
 
